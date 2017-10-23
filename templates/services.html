@@ -1,0 +1,23 @@
+{% extends "navbar.html" %}
+
+{% block main %}
+<h1>List of services</h1>
+<table>
+{% for key, value in services.items() %}
+    <tr>
+        <td style="width:100px">{{ key }}</td>
+        <td>
+            <table>
+            {% for k, v in value.items() %}
+                <tr>
+                    <td style="width=60px">{{ k }} :</td>
+                    <td>{{ v }}</td>
+                </tr>
+            {% endfor %}
+            </table>
+        </td>
+    </tr>
+{% endfor %}
+
+</table>
+{% endblock %}
